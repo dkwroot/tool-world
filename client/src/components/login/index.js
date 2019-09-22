@@ -1,15 +1,13 @@
 import React from "react";
 import { Spinner } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { serverURL } from "../../constants/constants";
 
 const Login = props => {
 	const handleSubmit = async e => {
 		const spinner = document.getElementById("spinnerArea");
 		spinner.style.visibility = "visible";
 		e.preventDefault();
-		console.log(serverURL + "/login");
-		const response = await fetch(serverURL + "/login", {
+		const response = await fetch("/login", {
 			method: "POST",
 			credentials: "include",
 			headers: {

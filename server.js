@@ -3,18 +3,10 @@ const mongoose = require("mongoose");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const passport = require("passport");
-//var cors = require("cors");
 require("dotenv").config();
 require("./auth/auth");
 
 const app = express();
-
-// Use Cors for cross-origin sharing
-// const corsPolicy = {
-// 	origin: "http://localhost:3000",
-// 	credentials: true
-// };
-// app.use(cors(corsPolicy));
 
 // Bodyparser Middleware
 app.use(express.json());

@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
-import { serverURL } from "../../constants/constants";
 
 const Profile = props => {
 	const getData = async () => {
-		let response = await fetch(serverURL + "/secure", {
+		let response = await fetch("/secure", {
 			method: "GET",
 			credentials: "include",
 			headers: {

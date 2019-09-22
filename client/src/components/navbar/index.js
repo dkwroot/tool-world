@@ -3,7 +3,6 @@ import { Navbar, Nav, NavDropdown, Badge } from "react-bootstrap";
 import Logo from "../../resources/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { getCookie } from "../../helper/cookie";
-import { serverURL } from "../../constants/constants";
 import { withRouter, Link } from "react-router-dom";
 import { useStoreState } from "easy-peasy";
 
@@ -24,7 +23,7 @@ function Navigation(props) {
 				props.history.push("/profile");
 				break;
 			case "logout":
-				const response = await fetch(serverURL + "/logout", {
+				const response = await fetch("/logout", {
 					method: "POST",
 					credentials: "include"
 				});
