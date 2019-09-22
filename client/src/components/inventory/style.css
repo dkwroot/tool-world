@@ -1,0 +1,33 @@
+.inventory__item-list {
+	width: fit-content;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1rem;
+}
+
+.inventory__item-card {
+	width: 100%;
+	max-width: 280px;
+}
+
+.inventory__item-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+@media only screen and (min-width: 600px) {
+	.inventory__item-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1rem;
+	}
+}
+
+@media only screen and (min-width: 880px) {
+	.inventory__item-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 1rem;
+	}
+}

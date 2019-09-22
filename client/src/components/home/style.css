@@ -1,0 +1,100 @@
+.home__container {
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: minmax(280px, 100vw);
+	grid-template-rows: minmax(600px, 100vh) minmax(400px, auto) auto;
+}
+
+.home-landing {
+	min-height: 600px;
+	height: 100%;
+	min-width: 280px;
+	width: 100%;
+	background: url("../../resources/digital_fade.png"),
+		url("../../resources/home_bg.jpg");
+	background-size: auto 100%, cover;
+	background-position: right, center;
+	background-repeat: no-repeat, no-repeat;
+}
+
+/* Card Styling */
+.home-landing__card {
+	color: white;
+	padding: 40px;
+	background: rgba(0, 0, 0, 0.8);
+	min-width: 280px;
+	width: 50%;
+	max-width: 500px;
+	justify-content: space-around;
+}
+
+.home-landing__links {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+/* SOCIAL MEDIA LINKS */
+.home-landing__social {
+	background: rgba(0, 0, 0, 0.4);
+	padding: 10px;
+}
+
+/* Home Services */
+.home-services {
+	background: lightgray;
+	min-height: 250px;
+	padding: 20px;
+}
+
+.home-services__item {
+	max-width: 300px;
+}
+
+/* Inventory Display */
+.home-inventory {
+	min-width: 280px;
+	min-height: 500px;
+}
+
+.home-inventory__card {
+	width: 300px;
+	padding: 10px;
+	border: 2px solid rgb(180, 180, 180);
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 250px 50px 150px;
+	overflow: hidden;
+}
+
+.home-inventory__card-image {
+	height: 250px;
+	background: green;
+}
+
+.home-inventory__card-title {
+	background: rgb(100, 100, 100);
+	color: white;
+}
+
+.home-inventory__tool-price {
+	background: rgba(53, 53, 53, 0.747);
+	width: 60px;
+	text-align: center;
+	color: white;
+	position: relative;
+	bottom: 440px;
+}
+
+/* Customer Reviews Display */
+.home-reviews {
+	width: 100%;
+	background: lightgray;
+}
+
+/* Footer Display */
+.home-footer {
+	background: black;
+	color: white;
+}

@@ -1,0 +1,72 @@
+/* USE BEM CSS FORMAT */
+* {
+  text-decoration: none;
+}
+
+/* STATICS */
+h1 {
+  font-family: Sans-Serif;
+  font-size: 4em;
+}
+
+h2 {
+  font-family: Sans-Serif;
+  font-size: 3em;
+}
+
+h3 {
+  font-family: Sans-Serif;
+  font-size: 2em;
+}
+
+h4 {
+  font-family: Sans-Serif;
+  font-size: 1.5em;
+}
+
+/* GLOBAL REUSABLES */
+.align-v {
+  align-items: center;
+}
+
+.align-h {
+  justify-content: center;
+}
+
+.center-v {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-h {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contain {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.line-5 {
+  background: white;
+  height: 5px;
+  width: 90%;
+}
+
+.white {
+  color: white;
+}
+
+.font-2 {
+  font-size: 2em;
+}
