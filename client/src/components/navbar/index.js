@@ -94,7 +94,7 @@ function Navigation(props) {
 							</NavDropdown.Item>
 						</LinkContainer>
 
-						<LinkContainer exact to="/logout">
+						<LinkContainer exact to="/">
 							<NavDropdown.Item
 								className="text-dark"
 								active={false}
