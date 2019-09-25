@@ -1,10 +1,14 @@
 import React, { useEffect } from "react";
+import { getCookie } from "../../helper/cookie";
 
 const Profile = props => {
 	const getData = async () => {
 		let response = await fetch("/secure", {
-			method: "GET",
+			method: "POST",
 			credentials: "include",
+			body: JSON.stringify({
+				username: getCookie("username")
+			}),
 			headers: {
 				Accept: "application/json",
 				"Content-Type": "application/json"

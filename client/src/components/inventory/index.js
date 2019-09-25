@@ -8,6 +8,7 @@ import "./style.css";
 const Inventory = () => {
 	const addToCart = useStoreActions(actions => actions.cart.addItem);
 
+	const [orderAmount, setOrderAmount] = useState(1);
 	const [filters, setFilters] = useState({
 		price: 2,
 		brand: "Any",
@@ -167,25 +168,26 @@ const Inventory = () => {
 					<div>{activeItem.description}</div>
 				</Modal.Body>
 				<Modal.Footer>
-					<Button variant="secondary" onClick={handleClose}>
+					<Button variant="secondary mr-auto" onClick={handleClose}>
 						Close
 					</Button>
-					<Button variant="primary" onClick={e => addToCart(activeItem)}>
+					<input
+						className="w-25"
+						onChange={e => setOrderAmount(e.target.value)}
+						type="number"
+						id="order_amount"
+						value={Math.max(1, orderAmount)}
+					/>
+					<Button
+						variant="primary"
+						onClick={e =>
+							addToCart({ number: parseInt(orderAmount, 10), item: activeItem })
+						}
+					>
 						Add to Cart
 					</Button>
 				</Modal.Footer>
 			</Modal>
-
-			<button
-				onClick={() => {
-					let tval = "1";
-					let test = {};
-					test[tval] = "HI";
-					console.log(test[1]);
-				}}
-			>
-				CLICK ME
-			</button>
 		</div>
 	);
 };

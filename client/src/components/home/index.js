@@ -28,7 +28,7 @@ const Home = () => {
 					</h6>
 					<div>{Inventory[x].description}</div>
 					<div className="home-inventory__tool-price">
-						${Inventory[x].price}.00
+						${Inventory[x].price}
 					</div>
 				</div>
 			);

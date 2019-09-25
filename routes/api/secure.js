@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
+const UserModel = require("../../models/model");
 
-router.get("/", (req, res) => {
-	res.send({ message: "Private Message Successful, Yay!" });
+router.post("/", (req, res) => {
+	res.send({ message: req.body.username });
 });
 
 module.exports = router;

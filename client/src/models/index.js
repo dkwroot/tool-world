@@ -4,12 +4,13 @@ const cartModel = {
 	items: {},
 	itemsNum: 0,
 	addItem: action((state, payload) => {
-		if (state.items[payload.id] === undefined) {
-			state.items[payload.id] = { number: 1, item: payload };
-			state.itemsNum = state.itemsNum + 1;
+		if (state.items[payload.item.id] === undefined) {
+			state.items[payload.item.id] = payload;
+			state.itemsNum = state.itemsNum + payload.number;
 		} else {
-			state.items[payload.id].number = state.items[payload.id].number + 1;
-			state.itemsNum = state.itemsNum + 1;
+			state.items[payload.item.id].number =
+				state.items[payload.item.id].number + payload.number;
+			state.itemsNum = state.itemsNum + payload.number;
 		}
 	}),
 	removeItem: action((state, itemID) => {
@@ -18,8 +19,16 @@ const cartModel = {
 	})
 };
 
+const userModel = {
+	username: "user",
+	setUserName: action((state, payload) => {
+		state.username = payload;
+	})
+};
+
 const storeModel = {
-	cart: cartModel
+	cart: cartModel,
+	user: userModel
 };
 
 export default storeModel;

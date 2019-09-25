@@ -1,8 +1,11 @@
 import React from "react";
 import { Spinner } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useStoreState, useStoreActions } from "easy-peasy";
 
 const Login = props => {
+	const setUserName = useStoreActions(action => action.user.setUserName);
+
 	const handleSubmit = async e => {
 		const spinner = document.getElementById("spinnerArea");
 		spinner.style.visibility = "visible";
@@ -22,6 +25,7 @@ const Login = props => {
 		try {
 			if (response.ok) {
 				let resp = await response.json();
+				setUserName(resp.username);
 				document.cookie = `username=${resp.username}`;
 				props.history.push("/");
 			} else {
