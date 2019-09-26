@@ -28,7 +28,12 @@ function Navigation(props) {
 	};
 
 	useEffect(() => {
-		setUserName(getCookie("username"));
+		let name = getCookie("username");
+		if (name !== undefined) {
+			setUserName(name);
+		} else {
+			setUserName("user");
+		}
 	}, []);
 
 	return (
