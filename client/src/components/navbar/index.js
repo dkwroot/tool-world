@@ -29,7 +29,7 @@ function Navigation(props) {
 
 	useEffect(() => {
 		let name = getCookie("username");
-		if (name !== undefined) {
+		if (name !== "") {
 			setUserName(name);
 		} else {
 			setUserName("user");
